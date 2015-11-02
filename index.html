@@ -13,7 +13,6 @@
     
     var calendar = document.createElement("div");
     calendar.setAttribute("class", "calendar");
-
     var month = document.createElement("div");
     month.setAttribute("class", "month");
     var head1 = document.createElement("h1");
@@ -26,7 +25,7 @@
     span.appendChild(text2);
     month.appendChild(span);
     var span2 = document.createElement("span");
-    span2.setAttribute("class", "day");
+    span2.setAttribute("class", "day" + " " + "current");
     var text3 = document.createTextNode("2");
     span2.appendChild(text3);
     month.appendChild(span2);
@@ -173,11 +172,67 @@
     var fix = document.createElement("div");
     fix.setAttribute("class", "clearfix");
     month.appendChild(fix);
-      
     calendar.appendChild(month);  
     document.body.appendChild(calendar);
 
-          
+    var newDiv = document.createElement("div");
+    newDiv.setAttribute("class", "formDiv");
+    var eventForm = document.createElement("fieldset");
+    eventForm.setAttribute("class", "eventForm");
+    var dayEvent = document.createElement("legend");
+    var commentText = document.createTextNode("Add A Full Day Event");
+    dayEvent.appendChild(commentText);
+    var textInput = document.createElement("textarea");
+    textInput.setAttribute("rows", "15");
+    textInput.setAttribute("cols", "40");
+    textInput.setAttribute("name", "comments");
+    textInput.setAttribute("id", "comments");
+    var saveButton = document.createElement("input");
+    saveButton.setAttribute("type", "submit");
+    saveButton.setAttribute("value", "save");
+    var cancelButton = document.createElement("input");
+    cancelButton.setAttribute("type", "submit");
+    cancelButton.setAttribute("value", "cancel");
+    eventForm.appendChild(dayEvent);
+    eventForm.appendChild(textInput);
+    eventForm.appendChild(saveButton);
+    eventForm.appendChild(cancelButton);
+    newDiv.appendChild(eventForm);
+    document.body.appendChild(newDiv);
+
+    var changeDiv = document.createElement("div");
+    changeDiv.setAttribute("class", "changeDiv");
+    var editForm = document.createElement("fieldset");
+    editForm.setAttribute("class", "editForm");
+    var editDay = document.createElement("legend");
+    var titleText = document.createTextNode("Your Full Day Event");
+    editDay.appendChild(titleText);
+    var closeButton = document.createElement("input");
+    closeButton.setAttribute("type", "submit");
+    closeButton.setAttribute("value", "close");
+    var editButton = document.createElement("input");
+    editButton.setAttribute("type", "submit");
+    editButton.setAttribute("value", "edit");
+    var removeButton = document.createElement("input");
+    removeButton.setAttribute("type", "submit");
+    removeButton.setAttribute("value", "remove");
+    editForm.appendChild(removeButton);
+    editForm.appendChild(editButton);
+    editForm.appendChild(closeButton);
+    editForm.appendChild(editDay);
+    changeDiv.appendChild(editForm);
+    document.body.appendChild(changeDiv);
+
+    var date = new Date();
+    var day = date.getDate();
+
+    
+
+    
+
+    
+
+
       }, 0);
   </script>
 </head>
