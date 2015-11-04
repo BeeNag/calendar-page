@@ -17,6 +17,26 @@ body{
   position:relative;
 }
 
+.formDiv{
+  width:35%;
+  position:absolute;
+  bottom: 200px;
+  left: 300px;
+  background-color: red;
+  border: 2px solid black;
+  font-family: 'Montserrat';
+}
+
+.changeDiv{
+  width:35%;
+  position:absolute;
+  bottom: 200px;
+  left: 300px;
+  background-color: white;
+  border: 2px solid black;
+  font-family: 'Montserrat';
+}
+
 .calendar:before,
 .calendar:after{
   content: '';
@@ -77,23 +97,46 @@ body{
   text-shadow:1px 1px 2px rgba(0,0,0,0.4);
 }
 
-.formDiv{
-  width:20%;
+.formDiv.hide{
+  width:35%;
   position:absolute;
-  bottom: 100px;
-}
-
-.changeDiv{
-  width:23%;
-  position:absolute;
-  bottom: 100px;
-}
-
-.hide {
+  bottom: 200px;
+  left: 300px;
+  background-color: red;
+  border: 5px solid black;
+  font-family: 'Montserrat';
   display: none;
 }
 
-.show {
+.formDiv.show{
+  width:35%;
+  position:absolute;
+  bottom: 200px;
+  left: 300px;
+  background-color: red;
+  border: 5px solid black;
+  font-family: 'Montserrat';
   display: inherit;
 }
 
+.changeDiv.hide{
+  width:35%;
+  position:absolute;
+  bottom: 200px;
+  left: 300px;
+  background-color: white;
+  border: 2px solid black;
+  font-family: 'Montserrat';
+  display: none;
+}
+
+.changeDiv.show{
+  width:35%;
+  position:absolute;
+  bottom: 200px;
+  left: 300px;
+  background-color: white;
+  border: 2px solid black;
+  font-family: 'Montserrat';
+  display: inherit;
+}
