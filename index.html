@@ -281,14 +281,16 @@
     var targetObject = {};
     var eventFlow = false;
 
-    for (var iterator = 1; iterator < days.length + 1; iterator++) {
-        console.log(days[iterator]);
-        var select = document.querySelector("span"); 
-console.log (("span"+iterator));
-        if ("span"+iterator.textContent === day) {
-            days[iterator].setAttribute("class", "day" + " " + "current");
-        }
-       }
+    // bug in the day highlighting code (doesn't work, needs a fix)
+
+//     for (var iterator = 1; iterator < days.length + 1; iterator++) {
+//         console.log(days[iterator]);
+//         var select = document.querySelector("span"); 
+// console.log (("span"+iterator));
+//         if ("span"+iterator.textContent === day) {
+//             days[iterator].setAttribute("class", "day" + " " + "current");
+//         }
+//        }
 
     for (i = 0; i < days.length; i++) {
         key = days[i];
